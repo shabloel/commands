@@ -1,0 +1,16 @@
+ng new appName							-> creates a new angular app
+ng serve 								-> start server
+ng generate class abc/className 		-> creates a new class in folder abc
+ng generate component abc/componentName -> creates a new component in folder abc
+ng generate service abc/serviceName		-> creates a new service
+ng add @angular/localize				-> adds a library to angular
+npm install @ng-bootstrap/ng-bootstrap	-> install ng bootstrap
+npm install bootstrap					-> intalls bootstrap
+npm install 
+ng build --prod							-> build application for production environment.
+ng test									-> test applicatie
+ng add @ng-bootstrap/ng-bootstrap		-> install bootstrap
+
+
+npm install @okta/okta-angular			-> installs okta-angular sdk
+npm install @okta/okta-signin-widget	-> gets okta widget

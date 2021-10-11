@@ -1,0 +1,7 @@
+cf login -a <<endpoint>>
+cf apps			-> all application with services
+cf spaces
+cf orgs
+cf target
+cf logs -recent	-> all logs of application
+

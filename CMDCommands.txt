@@ -1,0 +1,18 @@
+Port management CMD
+==========================================
+netstat -a -o -n   		-> all active ports
+taskkill /F /PID #nr.	-> kills task
+
+CMD commands
+=============================
+CLS  				-> clear screen
+ctr + c 			-> quit
+ipconfig 			-> ipAdress
+ipconfig/all 		-> all ipAddress
+set					-> all environment variables
+setx ENV_VAR path	-> set env variable
+
+Connect over SSH - powershell
+=============================
+ssh -l username pcname or ssh pcname
+

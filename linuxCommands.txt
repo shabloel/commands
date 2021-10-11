@@ -1,0 +1,46 @@
+Remove Create delete etc Directory
+rm -rf ~/.local/share/Trash/*  -> removes all files in trash folder
+
+
+ls						-> directory content
+ls -l					-> directory content more info
+ls -l -a or ls -al		-> also lists hidden files
+ls -F					-> displays file types
+							- directory
+							- @ link
+							- * executable
+ls -t					-> files sorted by time
+ls -deeper				-> list directory names not content
+ls -deeper				-> list directory names not content
+ls -r 					-> reverse order
+ls -latr				-> reverse order by time including hidden files plus more info
+ls -R					-> list all files recursively
+tree -d					-> visually list all directories recursively
+tree color				-> visually lists all directories recursively with color
+cd						-> change directory
+pwd						-> directory structure
+man						-> linux manual  f.f man ls, explains the ls assignment, 
+							- hit space bar for the next page, 
+							- up and down arrows to scroll
+							- enter, one line down at a time
+							- type: g -> top of the page
+							- type G -> to bottom page
+cd ..					-> one directory back
+cd						-> home directory
+cat filename			-> concatenates and displays file content
+echo					-> displays arguments on screen  f.e. echo $PATH
+exit					-> exits bash
+clear					-> clears the screen
+which cat				-> lists the locations of the program that is executed. f.e., if you have multiple programs with the same name
+which tac				-> lists the reverse locations of the program that is executed
+ls /bin					-> lists all linux commands
+man -k SEARCH-TERM 		-> searches the linux manual for a specific term
+command -h or --help	 -> explains command
+echo $OLDPWD			-> previous directory you were in
+.						-> current directory
+..						-> parent directory
+./program				-> executes program in current directory
+mkdir 					-> creates a directory
+rmdir					-> removes a directory
+rm -r dirName			-> removes a directory recursively
+mkdir -p				-> creates a deeper directory structure f.e. one/two/three 

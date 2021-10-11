@@ -1,0 +1,3 @@
+\l  -> all DB
+\du -> all roles
+CREATE DATABASE <database name>; -> creates new database

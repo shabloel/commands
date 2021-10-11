@@ -1,0 +1,270 @@
+GIT
+
+COMMANDS
+-------------------------------------------------------------------------
+config:
+--------------------------------------------------------------------------
+$ git config --global user.name "name"
+$ git config --global user.email "blabla@email.com"
+$ git config --global --list 				-> list username password and e-mail
+$ cat ~/.gitconfig							-> returns gits configuration
+$ git config --global core.editor "notepad++.exe -multiInst -nosession"		-> sets notepad as default text editor
+$ git config --global -e					-> adjust configuration in text editor
+
+-----------------------------------------------------------------------------
+remote    repoId = origin
+------------------------------------------------------------------------------
+$ git remote -v								-> displays the remote urls
+$ git remote set-url origin <<remoteURL>>	-> sets the new URL of the remote
+$ git remote remove origin					-> removes repo
+$ git remote add origin <<remoteURL>>		-> add a remote repository with name "origin"
+$ git remote add <reponame> remoteURL		-> add a remote repository with name "remoteUrl"
+
+--------------------------------------------------------------------------------
+log:
+--------------------------------------------------------------------------------
+$ :wq										-> get out of vi
+$ ctr + c									-> reset
+$ clear										-> deletes all commands, gets empty screen
+$ git help log								-> opens the internet help page
+$ git log									-> commit history in reverse chronological order
+$ git log --abbrev-commit					-> shortens the commit ID to 8 characters
+$ git log --graph --oneline  --decorate		-> a table with commits
+$ git log commitID commitID					-> lists all commits in between these two ID's
+$ git log --since="3 days ago"				-> all commits sbraince three days
+$ git log --filename.ext					-> commit history of that particular file
+$ git log --follow -- folder1/folder2/filename.ext -> tracks the different commits of a file
+$ git show commitID							-> shows all info regarding a commit and what content has changed
+$ q											-> quit. gets you out of log screen
+
+---------------------------------------------------------------------------------------------
+Git committing and pushing
+-----------------------------------------------------------------------------
+$ git add filename							-> adds an untracked file to the staging area
+$ git add -A								-> add all untracked files to staging area
+$ git add .									-> adds all files to the staging area recursively(files in nested folders).
+$ git commit -m "commit message"			-> adds the file to the LOCAL repository. cleans the working directory, doesn't open a message
+$ git commit								-> adds the file to the LOCAL repository. cleans the working directory, opens a message
+$ git commit -am "commit message"			-> adds and commits both at the same time
+$ git remote -v								-> returns the url of the remote repository, fetch and push
+$ git push origin branchName				-> origin, is the name of the remote repository. master is the name of the branch that is being pushed 
+
+
+---------------------------------------------------------------------------------------------------------
+Git pulling and fetching
+---------------------------------------------------------------------------------------------------------
+$ git pull origin master					-> pulls in the remote repository
+$ git fetch 								-> gets the latest meta-data from the repository, it doesn't download anything. used to see the changes
+$ git fetch -all							-> fetches all branches from the remote repository
+$ git fetch <branchUrl> <brancName>			-> fetches a specific brancName
+$ git fetch <repoUrl>						-> fetches a remote repo
+$ git fetch <remote-branchName>:<local-branchName>		-> fetches a remote branch
+$ git diff ...origin						-> shows the differnce between your local repo and the remote one
+
+-----------------------------------------------------------------------------------------------
+Git branching
+----------------------------------------------------------------------------------------------
+$ git branch -a								-> lists all local and remote branches
+$ git branch "branchName"					-> creates new branch
+$ git checkout branchName					-> switch to another branch
+$ git checkout -b "branchName"				-> creates and checks out branch at the same time
+$ git branch -d branchName					-> deletes a branch
+$ git branch -r 							-> list remote branches
+$ git branch -m oldbranchname newbranchname -> change branch name
+$ git diff branch1 branch2					-> shows the differences between two branches
+$ git difftool branch1 branch2				-> visualy shows difference between two branches
+$ git fetch --all							-> fetches all branches from remote repo
+$ git checkout origin/branchName			-> checks out branch
+$ git branch -f main HEAD~3					-> moves the main branch three parents up.
+$ git fetch --prune							-> removes historic branches that don't exist anymore remote
+
+In case new branch that doesn't have a branch upstream
+git push -u origin name_branch
+
+----------------------------------------------------------------------------------------------
+Git restoring and deleting
+------------------------------------------------------------------------------------------------
+
+$ git rd .git /S/Q							-> remove all git files from your project
+
+**untracked files**
+$ git clean -n								-> tells you which untracked files it will delete
+$ git clean -f								-> deletes all untracked files
+
+**unstaged(before git add)**
+$ git restore <fileName> 					-> discards changes of file in working directory
+$ git reset --hard							-> discards changes of ALL files in working directory
+$ git checkout .							-> revert ALL changes in the working directory
+
+**staged(after git add)**
+$ git restore --staged <fileName>			-> takes file out of staging area but keep changes
+$ git reset									-> takes all files out of staging area but keep the changes
+$ git reset HEAD							-> takes all files out of staging area to current commit
+$ git reset HEAD <fileName>					-> takes file out of staging area to current commit
+$ git reset --hard							-> discards everything permanently
+$ git stash									-> discard all local changes, but save them for later
+
+**committed files**
+$ git reset --soft HEAD~					-> reverts NOT PUSHED commit
+$ git revert branchName 					-> reverts commit
+$ git revert --no-edit branchName			-> avoids vim opening
+$ git revert <commit SHA>					-> reverts commit
+$ git revert branchName~2					-> reverts the last two commits before the head
+$ git reset <commit SHA> <fileName>			-> To undo changes on a single file or directory from commit B, but retain them in the unstaged state
+
+**git push**
+git push -f origin last_known_good_commit:branch_name -> reverts back the last push
+g
+
+------------------------------------------------------------------------------------------------------
+Git stashing
+------------------------------------------------------------------------------------------------------
+git stash									-> discards local changes but saves them
+git stash list								-> lists stashed commits
+git stash pop								-> redo previously stashed changes and remove them from stashed list
+git stash apply								-> redo previously stashed changes but keep them on the list
+
+------------------------------------------------------------------------------------------------------
+Git cloning and starting repository
+------------------------------------------------------------------------------------------------------
+$ git clone https://.....  					-> clones the remote repository and creates a folder with the repository name.
+												it automatically makes a relationship with the repositiry that is called "origin".
+$ git status					 			-> tells you where you are at the moment(master branch, branch etc.)
+												f.e.: origin/master
+												it also states that the "working tree/working driectory" is clean if you made no changes
+												it checks whether there are any changes between the working directory, staging area and 
+												our local repository and source repository.
+$ git init	filename						-> This command creates an empty Git repository - basically a .git directory with subdirectories
+												for objects, refs/heads, refs/tags, and template files. An initial HEAD file that references 
+												the HEAD of the master branch is also created. basically the working directory.
+												
+$ git rm -rf .git							-> undo git init
+$ git fetch nameRepo https://.....			-> gets the remote repository as a separate entity in your local repo 
+												
+
+
+--------------------------------------------------------------------------------------------------------
+Git merging (make sure you are on the master branch)
+-------------------------------------------------------------------------------------------------------
+$ git merge branchName						-> fast forward merge of the branchName with the master branch
+$ git merge branchName -m "message"			-> fast forward merge of the branchName with the master branch
+$ git merge -Xignore-space-change whitespace -> git beschouwd bij het mergen een witruimte gelijk als twee drie of meer en zal geen merge confrlict geven
+$ git merge -Xignore-all-space				-> git negeert bij het mergen alle verschillen in witruimtes.
+$ git merge branchName --no-ff				-> it means the merge does NOT skip all the changes on the master branch
+$ git merge --abort							-> aborts the merge
+$ git reset --hard HEAD						-> in geval het een grote bende is. Al het niet ge-comitte werk gaat verloren. kan ook naar een specifiek branch/commit als je HEAD vervangt
+$ git merger master --no-ff					-> get latest updates from the master branch in your dev branch
+------------------
+get master code op branch
+
+ga naar branch
+-git fetch -all
+-git merge master --no-ff
+
+------------------------------------------------------------------------------------------------
+Git advanced workflow										
+-------------------------------------------------------------------------------------------------
+$ git checkout -- filename.ext				-> undoes the changes you made to a file in the working directory or undoes a deletion
+$ git config --global alias.name "the git command" -> name is the name you give you command.
+$ git branch -f <brancName> HEAD~2			-> moves the branch back two commits.
+$ git branch -f <brancName> <commit Hash>	-> moves the branch to a particular commit
+$ git cherry-pick <commit Hash> <comm .... etc -> copy the commits and pastes them in front of your checked out branch with the new brnach and head pointing to the last copied commit
+$ git rebase -i HEAD~4						-> opens an interactive command window where you can re-arrange your commits
+
+Create a file
+------------------------------------------------------------------------------------------------
+$ echo "content textfile" >> namefile.txt	-> create content and file to your folder.
+$ cat filename.txt							-> display contents of file
+$ touch filename							-> creates empty textfile
+
+
+$ exit										-> closes gitbash
+------------------------------------------------------------------------------------------------
+notepad++
+--------------------------------------------------------------------------------------------------
+$ notepad++									-> opens notepad++
+$ notepad++	.filename						-> opens notepad++ and creates filen with filename
+
+-------------------------------------------------------------------------------------------------
+Directories
+-------------------------------------------------------------------------------------------------
+$ cd ~										-> shorthand for users home directory
+$ cd ..										-> go one directory back
+$ cd ../../									-> go two directories back
+$ cd										-> go to the home directory of the user f.e. user/username
+$ cd -										-> go back to previous location
+$ cd directory								-> goes to that particular directory
+$ ls										-> lists content of current directory
+$ ls -al									-> list all folders including.file
+$ pwd 										-> which directory are we?
+
+------------------------------------------------------------------------------------------------
+Folder and file options
+------------------------------------------------------------------------------------------------
+
+$ mkdir folder_name							-> create a folder
+$ mkdir -p level1/level12/level13/level5/	-> creates a nested folder structure 
+$ rm -rf folder								-> removes the folder
+$ rm filename.ext							-> removes an UNTRACKED file
+$ git rm filename.ext						-> removes a TRACKED file
+$ git ls -files								-> shows all tracked files
+$ git mv old_folder_name new_folder_name	-> renames folder or file on gitbash level
+$ git mv file_name folder_name				-> move file to another folder
+$ mv old_folder_name new_folder_name		-> renames folder or file on windows level, see point 2
+
+--------------------------------------------------------------------------------------------------
+SSH
+----------------------------------------------------------------------------------------------------
+$ ls -al ~/.ssh								-> lists the files in your .ssh directory, if they exist
+$ ssh-keygen -t ed25519 -C "your_email@example.com" -> generates new ssh key
+$ eval `ssh-agent -s`						-> starts SSH agent
+$ ssh-add ~/.ssh/id_ed25519					-> adds ssh to agent
+$ clip < ~/.ssh/id_ed25519.pub				-> saves ssh to clipboard
+
+Terminology:
+Untracked file: a file in our working directory that hasn't been added to GIT yet.
+
+DIRECTORY
+your directory has a hidden file called .git.
+
+In it there are three folders:
+1. Working directory
+Holds all the local application files. Is what git monitors for changes.
+
+2.Staging area
+uncommitted changes
+
+3. Repository
+Sits in working directory
+contains actual git repository
+inlcudes all commits
+
+
+points
+----------------------------------------------------------------------------------------------------
+1. If changes are made to a file that is already in the staging directory, the file both appears in the unchanged
+and changed changes directory.
+---------------------------------------------------------------------------------------------------
+2. If you re-name a file from youw windows directory, Git status will tell you that the original filename is deleted,
+and the new filename is a new file.
+--------------------------------------------------------------------------------------------------------
+3. If you delete a file with only a Bash command you get a change not staged for commit.
+Solve this with a git add -A command
+--------------------------------------------------------------------------------------------------
+4. To ignore files by Git, you can make a file called .gitignore without extension.
+in it you can write the name of files you want git to ignore
+----------------------------------------------------------------------------------------------------------
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+* indicates current branch.
+
+
+
+
+
+
+
+
+

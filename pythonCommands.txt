@@ -1,0 +1,1 @@
+python3 -m pip list			-> list all packages in remote-packages

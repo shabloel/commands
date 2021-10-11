@@ -1,0 +1,15 @@
+gradlew build   			-> builts your project
+gradlew tasks				-> shows list of tasks available in docker
+gradle init					-> creates a build.gradle file in the project
+
+
+palatin plugin to launch a jar file to a docker containter
+************************************************************
+gradlew docker				-> creates a docker image
+gradlew dockerRun			-> launches the image in a docker container
+
+gradlew dockerTagDockerHub	-> Creates a tag of your image. docker images now lists the concerning image and its tag
+docker login				-> logs in to Dockerhub account
+gradleW dockerPushDockerHub	-> pushes the image to the repository
+
+gradleW dockerStop			-> stops and removes container

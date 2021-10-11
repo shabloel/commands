@@ -1,0 +1,68 @@
+Basic
+================================================================================
+docker --version								-> version of docker
+docker -v										-> version of docker
+docker version									-> information regarding docker client and docker server
+docker info										-> information regarding docker locally installed
+docker (command you want help with) --help 		-> help regarding specific command
+docker login									-> login to your docker hub (if you created an account there)
+
+Images
+================================================================================
+docker images									-> lists all the images we have
+docker images -a								-> lists all the images we have
+docker images -q								-> lists only the id of the images
+docker pull	(image name)						-> get an image from docker hub
+docker rmi	(image name or id)					-> remove an image
+docker rmi -f (image name or id)				-> forcefully removes an image
+docker images -f "dangling=false"				-> lists all the images, filtered on whether they are dangling or not
+docker inspect (image name)						-> lists all the details of a particular image
+docker history (image name)		 				-> lists the history of an image
+docker build -f Dockerfile -t name-application .-> Creates a docker image. Don't forget the .
+
+Containers
+================================================================================
+docker ps										-> lists only started containers
+docker ps -a									-> lists all existing containers started or not started
+docker run	(image name or id)					-> creates a container. if the image is not stored locally it pulls it from the hub if available
+docker run -it	(image name or id)				-> runs and starts a container interactively, f.e. in case of Linux, you can use its command line
+docker start (container name or id)				-> starts a container
+docker start (container name ord id) -i			-> starts a container interactive mode. f.e. a bash for Linux
+docker stop (container name or id)				-> stops a container
+docker container rm (container name or id)		-> removes a stopped container
+docker container prune							-> removes all stopped containers
+docker run -p 8085:9090	application-name		-> 8085 is the Docker port. 9090 is the application port that runs in the docker container
+
+Volume
+================================================================================
+docker volume create volume name				-> creates a directory in the docker container
+docker volume ls								-> listts the folumes
+docker volume inspect (volume name)				-> a json file with all volume information
+docker volume rm volumeName						-> removes a volume
+
+
+ANGULAR
+==================
+docker build -t <nameApp> .
+docker run -d -it -p 4200:80 ecommerce-frontend -> 4200 is the port on your local machine.
+docker ls             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+system
+================================================================================
+docker stats									-> statistics of the running containers
+docker system df								-> disk usage of docker container and images
+docker system prune								-> deletes all images and containers not in use

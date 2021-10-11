@@ -1,0 +1,21 @@
+
+mvn clean install 				-> installs the target folder in which the JAR files are stored
+mvn clean install -Pdocbook		-> installs documentations
+mvn clean		  				-> deletes the target folder
+mvn clean install -DskipTests 	-> run only maven install without the tests
+mvn clean install -U			-> pakt alle dependencies van buiten ipv je local repo
+mvn clean install >	tekst.txt	-> schrijft je mvn log naar een tekstfile
+mvn package						-> creates executable jar
+
+
+mvn install:install-file -Dfile=filenaam.jar -DpomFile=pomNaam.pom
+***************************************************************************
+
+mvn dependency:tree >tree.txt	-> creates a file in de src of the project where all the dependencies are listed
+
+
+mvn release:prepare				-> bouwt een tag en verhoogd snapshot met een.
+mvn release:clean				-> deletes de backup pom en props na een mvn release
+mvn release:rollback			-> rolls back the release
+
+mvn spring-boot:run				-> runs a springboot application

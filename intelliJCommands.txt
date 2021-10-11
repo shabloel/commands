@@ -1,0 +1,74 @@
+Search:
+****************
+ctr + shift + n			-> search(navigate) everything
+double shift			-> search(navigate) everything
+ctr + name				-> find class by name(handy for searching libraries)
+ctr + f					-> find in open file
+ctr + shift + f		 	-> global search in Path
+ctr + g					-> type lijnnummer in om code te vinden
+ctr + r					-> rename
+ctr + b					-> get to where a method or variable is declared
+
+Code generation:
+********************
+ctr + I					-> implement methods from interface
+ctr + O					-> overwrite methods from super class
+alt + insert			-> opens window pane with options like constuctor, getters and setters, overwrite etc
+ctr + Alt + O			-> organizes imports
+ctr + Alt + v			-> extract variable
+ctr + alt + L			-> beautify code
+alt + enter				-> imports package or if your cursor is on class name you can create a test
+ctr + alt + te			-> surrounds code with try and catch block
+psvm					-> creates a main
+alt + enter				-> adds parameters to constructor
+
+Project structure:
+*******************
+ctr + f12				-> window pane; show file structure
+alt + 7					-> show file structure
+alt + f1				-> opens window pane with different options like 1. project view, 7. file structure etc etc
+							- A.local changes ctr + d -> see difference
+		
+Navigate:
+************
+shift + ctr + t			-> switch between testclass and class
+alt + left/right		-> switch between open window panes
+alt + 1					-> go to project folders on the left
+ctr + e					-> shows open files
+
+Code helpers:
+***************
+ctr + D					-> duplicate code fragment
+ctr + y					-> delete line
+ctr + shift				-> move line of code
+shift + alt				-> move line of code
+ctr + shift + z			-> redo
+shift + f6				-> refactor re-name
+sout ctrl + space 		-> system.out.println
+ctr + alt + l			-> format code
+ctr + w					-> make selections
+ctr + shift + w			-> unselects
+ctr + shift + alt + j   -> edit multiple lines at the same time
+ctr + package			-> parameter info
+Ctr + enter				-> import
+ctr + alt + n  		 	-> inline
+shift + f10				-> run application
+ctr + shift + /		 	-> comment out block
+
+Documentation
+************
+ctr + q					-> java doc
+shift + f1				-> external javadoc
+ctr+alt+shift+D         -> create an UML schema
+
+
+
+
+
+
+Run code
+************
+
+navigate to target folder
+java -jar nameApplication(from the target folder) --server.port=8080
+
