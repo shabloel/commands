@@ -21,6 +21,7 @@ alt + enter				-> imports package or if your cursor is on class name you can cre
 ctr + alt + te			-> surrounds code with try and catch block
 psvm					-> creates a main
 alt + enter				-> adds parameters to constructor
+ctr + alt + m           -> extract a method
 
 Project structure:
 *******************
