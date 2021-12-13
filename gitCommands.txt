@@ -153,7 +153,7 @@ $ git merge -Xignore-all-space				-> git negeert bij het mergen alle verschillen
 $ git merge branchName --no-ff				-> it means the merge does NOT skip all the changes on the master branch
 $ git merge --abort							-> aborts the merge
 $ git reset --hard HEAD						-> in geval het een grote bende is. Al het niet ge-comitte werk gaat verloren. kan ook naar een specifiek branch/commit als je HEAD vervangt
-$ git merger master --no-ff					-> get latest updates from the master branch in your dev branch
+$ git merge master --no-ff					-> get latest updates from the master branch in your dev branch
 ------------------
 get master code op branch
 

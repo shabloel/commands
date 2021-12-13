@@ -16,12 +16,12 @@ ctr + O					-> overwrite methods from super class
 alt + insert			-> opens window pane with options like constuctor, getters and setters, overwrite etc
 ctr + Alt + O			-> organizes imports
 ctr + Alt + v			-> extract variable
+ctr + alt + m           -> extract a method
 ctr + alt + L			-> beautify code
 alt + enter				-> imports package or if your cursor is on class name you can create a test
-ctr + alt + te			-> surrounds code with try and catch block
+ctr + alt + t			-> surrounds code with try and catch block
 psvm					-> creates a main
 alt + enter				-> adds parameters to constructor
-ctr + alt + m           -> extract a method
 
 Project structure:
 *******************
@@ -29,10 +29,15 @@ ctr + f12				-> window pane; show file structure
 alt + 7					-> show file structure
 alt + f1				-> opens window pane with different options like 1. project view, 7. file structure etc etc
 							- A.local changes ctr + d -> see difference
+							
+Testing:
+**********
+shift + ctr + t			-> switch between testclass and class
+alt + insert			-> creates a generate pane with options for writing a test
 		
 Navigate:
 ************
-shift + ctr + t			-> switch between testclass and class
+
 alt + left/right		-> switch between open window panes
 alt + 1					-> go to project folders on the left
 ctr + e					-> shows open files
@@ -61,10 +66,6 @@ Documentation
 ctr + q					-> java doc
 shift + f1				-> external javadoc
 ctr+alt+shift+D         -> create an UML schema
-
-
-
-
 
 
 Run code
