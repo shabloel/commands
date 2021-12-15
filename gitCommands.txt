@@ -18,7 +18,7 @@ $ git remote -v								-> displays the remote urls
 $ git remote set-url origin <<remoteURL>>	-> sets the new URL of the remote
 $ git remote remove origin					-> removes repo
 $ git remote add origin <<remoteURL>>		-> add a remote repository with name "origin"
-$ git remote add <reponame> remoteURL		-> add a remote repository with name "remoteUrl"
+$ git remote add <<reponame>> <<remoteURL>>	-> add a remote repository with name "remoteUrl"
 
 --------------------------------------------------------------------------------
 log:
