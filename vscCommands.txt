@@ -1,3 +1,7 @@
 shift + alt up down arrow	-> copy line of code
 F2 							-> rename variable
 ctr+/						-> commend out block of code
+ctr + r						-> refactor
+shift + alt + f				-> format code
+alt up down					-> move code
+ctr + .						-> import code

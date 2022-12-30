@@ -47,7 +47,6 @@ $ git commit -m "commit message"			-> adds the file to the LOCAL repository. cle
 $ git commit								-> adds the file to the LOCAL repository. cleans the working directory, opens a message
 $ git commit -am "commit message"			-> adds and commits both at the same time
 $ git remote -v								-> returns the url of the remote repository, fetch and push
-$ git push origin branchName				-> origin, is the name of the remote repository. master is the name of the branch that is being pushed 
 
 
 ---------------------------------------------------------------------------------------------------------

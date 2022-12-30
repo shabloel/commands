@@ -14,3 +14,7 @@ ng add @ng-bootstrap/ng-bootstrap		-> install bootstrap
 
 npm install @okta/okta-angular			-> installs okta-angular sdk
 npm install @okta/okta-signin-widget	-> gets okta widget
+npm install -L							-> puts dependencies in package.json
+
+
+npm cache clean --force
