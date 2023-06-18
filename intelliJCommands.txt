@@ -1,8 +1,10 @@
+ctr + shift + A		 	-> all the shortcuts
+
 Search:
 ****************
 ctr + shift + n			-> search(navigate) everything
 double shift			-> search(navigate) everything
-ctr + name				-> find class by name(handy for searching libraries)
+ctr + n					-> find class by name(handy for searching libraries)
 ctr + f					-> find in open file
 ctr + shift + f		 	-> global search in Path
 ctr + g					-> type lijnnummer in om code te vinden
@@ -17,40 +19,40 @@ alt + insert			-> opens window pane with options like constuctor, getters and se
 ctr + Alt + O			-> organizes imports
 ctr + Alt + v			-> extract variable
 ctr + alt + m           -> extract a method
-ctr + alt + L			-> beautify code
 alt + enter				-> imports package or if your cursor is on class name you can create a test
 ctr + alt + t			-> surrounds code with try and catch block
 psvm					-> creates a main
 alt + enter				-> adds parameters to constructor
+shift + ctr + enter		-> completes current statement
+sout 					-> system.out.println
+ctr + D					-> duplicate code fragment
+ctr + y					-> delete line
 
-Project structure:
+Navigate through intellij
 *******************
 ctr + f12				-> window pane; show file structure
 alt + 7					-> show file structure
+alt + f7				-> find out where an interface field, method or class is used.
 alt + f1				-> opens window pane with different options like 1. project view, 7. file structure etc etc
 							- A.local changes ctr + d -> see difference
-							
-Testing:
-**********
 shift + ctr + t			-> switch between testclass and class
 alt + insert			-> creates a generate pane with options for writing a test
-		
-Navigate:
-************
-
 alt + left/right		-> switch between open window panes
 alt + 1					-> go to project folders on the left
-ctr + e					-> shows open files
+ctr + e					-> shows opened files
+esc						-> navigate back to editot or close any pop-up
+ctr + B					-> goes to declaration of symbol
+ctr + alt + B			-> takes you to implementation of class or of field or method
+ctr ctr					-> opens run anything window
+ctr + f4				-> close tab
+ctr + alt + s			-> settings
 
 Code helpers:
 ***************
-ctr + D					-> duplicate code fragment
-ctr + y					-> delete line
+
 ctr + shift				-> move line of code
-shift + alt				-> move line of code
 ctr + shift + z			-> redo
 shift + f6				-> refactor re-name
-sout ctrl + space 		-> system.out.println
 ctr + alt + l			-> format code
 ctr + w					-> make selections
 ctr + shift + w			-> unselects
@@ -60,6 +62,7 @@ Ctr + enter				-> import
 ctr + alt + n  		 	-> inline
 shift + f10				-> run application
 ctr + shift + /		 	-> comment out block
+
 
 Documentation
 ************
