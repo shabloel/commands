@@ -5,3 +5,6 @@ ctr + r						-> refactor
 shift + alt + f				-> format code
 alt up down					-> move code
 ctr + .						-> import code
+ctr + shift + O				-> all methods within class
+ctr + p						-> open any file
+ctr + f12					-> go to implementation
